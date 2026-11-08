@@ -10,6 +10,11 @@ class Pulseview < Formula
     regex(/href=.*?pulseview[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/schue30/homebrew-sigrok/releases/download/pulseview-0.4.2"
+    sha256 cellar: :any, arm64_tahoe: "2ef37902383e9aa3e6092dddb8bdae0cdac0128de849fecbbb6111bfe38a3e89"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "boost"
