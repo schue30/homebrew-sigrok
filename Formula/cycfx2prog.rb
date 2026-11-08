@@ -11,6 +11,11 @@ class Cycfx2prog < Formula
     regex(/href=.*?cycfx2prog[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    root_url "https://github.com/schue30/homebrew-sigrok/releases/download/cycfx2prog-0.47"
+    sha256 cellar: :any, arm64_tahoe: "6d707096154a1c1e104d1abcd34897495521782e5002f57ffc36e0ad74f778df"
+  end
+
   depends_on "libusb-compat"
 
   # Fix link order and add EEPROM programming (eeprom:AX and iic:FILE commands)
