@@ -6,6 +6,11 @@ class Micronucleus < Formula
   license "GPL-2.0-or-later"
   head "https://github.com/micronucleus/micronucleus.git", branch: "master"
 
+  bottle do
+    root_url "https://github.com/schue30/homebrew-sigrok/releases/download/micronucleus-2.6"
+    sha256 cellar: :any, arm64_tahoe: "d3ae43a56be7cbfc7bf6e2edabf1fb3f8259e2f5a4da0bde43b006142e7ade16"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "libusb-compat"
 
